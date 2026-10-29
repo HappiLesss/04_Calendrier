@@ -7,5 +7,5 @@
 #define INC_04_CALENDRIER_AFFICHAGE_H
 void message_saisi(int annee_min, int annee_max);
 void check_saisie(int annee_saisie, int annee_min, int annee_max);
-void affichage_calendrier(std::string& mois, int annee_saisie, int no_mois);
+void affichage_calendrier(int annee_saisie);
 #endif //INC_04_CALENDRIER_AFFICHAGE_H

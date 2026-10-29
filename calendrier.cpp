@@ -16,11 +16,6 @@ int main() {
         check_saisie(annee_saisie, annee_min, annee_max);
     }
     while (annee_saisie<annee_min || annee_saisie > annee_max);
-    std::array<std::string,12> mois{"Janvier","Février", "Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"};
-    int no_mois = 0;
-    for (std::string mois_affichage : mois) {
-        no_mois++;
-        affichage_calendrier(mois_affichage, annee_saisie,no_mois );
-    }
+    affichage_calendrier(annee_saisie);
     return EXIT_SUCCESS;
 }
