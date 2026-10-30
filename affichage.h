@@ -8,4 +8,5 @@
 void message_saisi(int annee_min, int annee_max);
 void check_saisie(int annee_saisie, int annee_min, int annee_max);
 void affichage_calendrier(int annee_saisie);
+int set_largeur_affichage(int width, int jours, int compteur);
 #endif //INC_04_CALENDRIER_AFFICHAGE_H
