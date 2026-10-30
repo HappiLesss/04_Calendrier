@@ -4,8 +4,8 @@
 #include "date.h"
 #include <iostream>
 #include <cstdlib>
-#include <array>
-#include "affichage.h"
+#include <ctime>
+
 bool anneebisextile(int annee_saisie) {
     return annee_saisie %400 ==0 ||(annee_saisie %4==0&&annee_saisie %100!=0);
 }
@@ -30,6 +30,13 @@ int calcul_jour_mois(int mois, int annee_saisie) {
         default:
             return jours_fevrier;
     }
+}
+int premier_jour_annee(int annee_saisie, int annee_debut) {
+    std::tm t {};
+    t.tm_year = annee_saisie-annee_debut;
+    t.tm_mday = 1;
+    std::mktime(&t);
+    return t.tm_wday+1;
 }
 
 

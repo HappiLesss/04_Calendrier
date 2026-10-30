@@ -12,6 +12,9 @@
 void message_saisi(int annee_min, int annee_max) {
     std::cout<<"entrer une valeur ["<<annee_min<<" - "<<annee_max<<"]"<<std::endl;
 }
+void message_recommencer() {
+    std::cout<<"voulez-vous continuer [O|N] : ";
+}
 
 void check_saisie(int annee_saisie, int annee_min, int annee_max) {
     if (annee_saisie < annee_min || annee_saisie > annee_max)
@@ -19,7 +22,7 @@ void check_saisie(int annee_saisie, int annee_min, int annee_max) {
         std::cout<<"/!\\ erreur de saisie \n";
     }
 }
-void affichage_calendrier(int annee_saisie)
+void affichage_calendrier(int annee_saisie, int premier_jour)
 {
     //Liste des mois de l'année
     std::array<std::string,12> mois{"Janvier","Février", "Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"};
@@ -27,7 +30,7 @@ void affichage_calendrier(int annee_saisie)
     std::string jours_semaine ="LMMJVSD";
     int no_mois = 0;
     //Compteur pour déterminer le nombre de jours affiché
-    int compteur = 0;
+    int compteur = premier_jour;
     //Paramètre pour définir la largeur
     int setwidth = 11;
     //Première boucle pour afficher tous les mois de l'année
